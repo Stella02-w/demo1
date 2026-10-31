@@ -1,0 +1,2499 @@
+{
+ "impact": {
+  "Unknown_B": {
+   "node": "Unknown_B",
+   "layer": "smelter",
+   "verified": false,
+   "suppliers": [
+    "Supplier_B",
+    "Supplier_H",
+    "Supplier_I"
+   ],
+   "parts": [
+    "Bracket_T1B",
+    "Cover_T1D"
+   ],
+   "paths": [
+    [
+     "Unknown_B",
+     "Supplier_B",
+     "Bracket_T1B",
+     "Tier1_B"
+    ],
+    [
+     "Unknown_B",
+     "Supplier_H",
+     "Cover_T1D",
+     "Tier1_D"
+    ],
+    [
+     "Unknown_B",
+     "Supplier_I",
+     "Cover_T1D",
+     "Tier1_D"
+    ]
+   ],
+   "comparisons": [
+    {
+     "key": "bracket",
+     "parts": [
+      "Bracket_T1A",
+      "Bracket_T1B"
+     ],
+     "parts_below_node": [
+      "Bracket_T1B"
+     ],
+     "flips_alone": false,
+     "flips_with": [],
+     "target_changes": [
+      "Bracket_T1B"
+     ],
+     "labels": {
+      "Unknown_B primary_pcf": "needs_human_review"
+     },
+     "changes_decision": true,
+     "significance": [
+      "Bracket_T1B would miss its target"
+     ],
+     "blocked_by": [],
+     "spend": null
+    },
+    {
+     "key": "cover",
+     "parts": [
+      "Cover_T1D",
+      "Cover_T1E"
+     ],
+     "parts_below_node": [
+      "Cover_T1D"
+     ],
+     "flips_alone": true,
+     "flips_with": [],
+     "target_changes": [],
+     "labels": {
+      "Unknown_B primary_pcf": "needs_human_review"
+     },
+     "changes_decision": true,
+     "significance": [
+      "ranking flips"
+     ],
+     "blocked_by": [],
+     "spend": null
+    }
+   ],
+   "comparisons_changed": [
+    "bracket",
+    "cover"
+   ],
+   "breadth": 2
+  },
+  "Unknown_D": {
+   "node": "Unknown_D",
+   "layer": "smelter",
+   "verified": false,
+   "suppliers": [
+    "Supplier_D"
+   ],
+   "parts": [
+    "Housing_T1C"
+   ],
+   "paths": [
+    [
+     "Unknown_D",
+     "Supplier_D",
+     "Housing_T1C",
+     "Tier1_C"
+    ]
+   ],
+   "comparisons": [
+    {
+     "key": "housing",
+     "parts": [
+      "Housing_T1C"
+     ],
+     "parts_below_node": [
+      "Housing_T1C"
+     ],
+     "flips_alone": false,
+     "flips_with": [],
+     "target_changes": [],
+     "labels": {},
+     "changes_decision": false,
+     "significance": [],
+     "blocked_by": [
+      "Supplier_D: declared per piece, not per kg"
+     ],
+     "spend": null
+    }
+   ],
+   "comparisons_changed": [],
+   "breadth": 0
+  },
+  "Supplier_K": {
+   "node": "Supplier_K",
+   "layer": "supplier",
+   "verified": null,
+   "suppliers": [
+    "Supplier_K"
+   ],
+   "parts": [
+    "Cover_T1E"
+   ],
+   "paths": [
+    [
+     "Smelter_EU",
+     "Supplier_K",
+     "Cover_T1E",
+     "Tier1_E"
+    ]
+   ],
+   "comparisons": [
+    {
+     "key": "cover",
+     "parts": [
+      "Cover_T1D",
+      "Cover_T1E"
+     ],
+     "parts_below_node": [
+      "Cover_T1E"
+     ],
+     "flips_alone": false,
+     "flips_with": [],
+     "target_changes": [],
+     "labels": {
+      "Supplier_K recycled_share": "continue_analysis"
+     },
+     "changes_decision": false,
+     "significance": [],
+     "blocked_by": [],
+     "spend": null
+    }
+   ],
+   "comparisons_changed": [],
+   "breadth": 0
+  },
+  "Smelter_EU": {
+   "node": "Smelter_EU",
+   "layer": "smelter",
+   "verified": true,
+   "suppliers": [
+    "Supplier_C",
+    "Supplier_F",
+    "Supplier_K"
+   ],
+   "parts": [
+    "Bracket_T1A",
+    "Cover_T1E"
+   ],
+   "paths": [
+    [
+     "Smelter_EU",
+     "Supplier_C",
+     "Bracket_T1A",
+     "Tier1_A"
+    ],
+    [
+     "Smelter_EU",
+     "Supplier_C",
+     "Cover_T1E",
+     "Tier1_E"
+    ],
+    [
+     "Smelter_EU",
+     "Supplier_F",
+     "Cover_T1E",
+     "Tier1_E"
+    ],
+    [
+     "Smelter_EU",
+     "Supplier_K",
+     "Cover_T1E",
+     "Tier1_E"
+    ]
+   ],
+   "comparisons": [
+    {
+     "key": "bracket",
+     "parts": [
+      "Bracket_T1A",
+      "Bracket_T1B"
+     ],
+     "parts_below_node": [
+      "Bracket_T1A"
+     ],
+     "flips_alone": false,
+     "flips_with": [],
+     "target_changes": [],
+     "labels": {},
+     "changes_decision": false,
+     "significance": [],
+     "blocked_by": [],
+     "spend": null
+    },
+    {
+     "key": "cover",
+     "parts": [
+      "Cover_T1D",
+      "Cover_T1E"
+     ],
+     "parts_below_node": [
+      "Cover_T1E"
+     ],
+     "flips_alone": false,
+     "flips_with": [],
+     "target_changes": [],
+     "labels": {},
+     "changes_decision": false,
+     "significance": [],
+     "blocked_by": [],
+     "spend": null
+    }
+   ],
+   "comparisons_changed": [],
+   "breadth": 0
+  },
+  "Supplier_B": {
+   "node": "Supplier_B",
+   "layer": "supplier",
+   "verified": null,
+   "suppliers": [
+    "Supplier_B"
+   ],
+   "parts": [
+    "Bracket_T1B"
+   ],
+   "paths": [
+    [
+     "Unknown_B",
+     "Supplier_B",
+     "Bracket_T1B",
+     "Tier1_B"
+    ]
+   ],
+   "comparisons": [
+    {
+     "key": "bracket",
+     "parts": [
+      "Bracket_T1A",
+      "Bracket_T1B"
+     ],
+     "parts_below_node": [
+      "Bracket_T1B"
+     ],
+     "flips_alone": true,
+     "flips_with": [],
+     "target_changes": [
+      "Bracket_T1B"
+     ],
+     "labels": {
+      "Supplier_B recycled_share": "needs_human_review"
+     },
+     "changes_decision": true,
+     "significance": [
+      "ranking flips",
+      "Bracket_T1B would miss its target"
+     ],
+     "blocked_by": [],
+     "spend": null
+    }
+   ],
+   "comparisons_changed": [
+    "bracket"
+   ],
+   "breadth": 1
+  },
+  "Supplier_H": {
+   "node": "Supplier_H",
+   "layer": "supplier",
+   "verified": null,
+   "suppliers": [
+    "Supplier_H"
+   ],
+   "parts": [
+    "Cover_T1D"
+   ],
+   "paths": [
+    [
+     "Unknown_B",
+     "Supplier_H",
+     "Cover_T1D",
+     "Tier1_D"
+    ]
+   ],
+   "comparisons": [
+    {
+     "key": "cover",
+     "parts": [
+      "Cover_T1D",
+      "Cover_T1E"
+     ],
+     "parts_below_node": [
+      "Cover_T1D"
+     ],
+     "flips_alone": false,
+     "flips_with": [],
+     "target_changes": [],
+     "labels": {},
+     "changes_decision": false,
+     "significance": [],
+     "blocked_by": [],
+     "spend": null
+    }
+   ],
+   "comparisons_changed": [],
+   "breadth": 0
+  },
+  "Supplier_C": {
+   "node": "Supplier_C",
+   "layer": "supplier",
+   "verified": null,
+   "suppliers": [
+    "Supplier_C"
+   ],
+   "parts": [
+    "Bracket_T1A",
+    "Cover_T1E"
+   ],
+   "paths": [
+    [
+     "Smelter_EU",
+     "Supplier_C",
+     "Bracket_T1A",
+     "Tier1_A"
+    ],
+    [
+     "Smelter_EU",
+     "Supplier_C",
+     "Cover_T1E",
+     "Tier1_E"
+    ]
+   ],
+   "comparisons": [
+    {
+     "key": "bracket",
+     "parts": [
+      "Bracket_T1A",
+      "Bracket_T1B"
+     ],
+     "parts_below_node": [
+      "Bracket_T1A"
+     ],
+     "flips_alone": false,
+     "flips_with": [],
+     "target_changes": [],
+     "labels": {},
+     "changes_decision": false,
+     "significance": [],
+     "blocked_by": [],
+     "spend": null
+    },
+    {
+     "key": "cover",
+     "parts": [
+      "Cover_T1D",
+      "Cover_T1E"
+     ],
+     "parts_below_node": [
+      "Cover_T1E"
+     ],
+     "flips_alone": false,
+     "flips_with": [],
+     "target_changes": [],
+     "labels": {},
+     "changes_decision": false,
+     "significance": [],
+     "blocked_by": [],
+     "spend": null
+    }
+   ],
+   "comparisons_changed": [],
+   "breadth": 0
+  }
+ },
+ "svs": {
+  "smelter": "Unknown_B",
+  "suppliers": [
+   "Supplier_B",
+   "Supplier_H",
+   "Supplier_I"
+  ],
+  "comparisons_changed": [
+   "bracket",
+   "cover"
+  ],
+  "deadline": "2026-11-27",
+  "days_left": 30,
+  "params": {
+   "link_cost": 0.2,
+   "hop_days": 10,
+   "link_days": 10,
+   "residual_cost": 1.0,
+   "residual_days": 30
+  },
+  "routes": {
+   "separate": {
+    "cost": 3.0,
+    "requests": 3,
+    "covers": "all claims, per supplier",
+    "steps": [
+     [
+      "supplier verification (B) 30d"
+     ]
+    ],
+    "lead_days": 30,
+    "slack_days": 0,
+    "feasible": true,
+    "at_risk": true
+   },
+   "shared_A": {
+    "cost": 1.6,
+    "cost_items": {
+     "smelter_pcf": 0.0,
+     "origin_links": 0.6,
+     "other_claims": 1.0
+    },
+    "requests": 3,
+    "covers": "smelter PCF once; origin link per supplier",
+    "still_open": [
+     "Supplier_B recycled_share"
+    ],
+    "reusable_for": [
+     "Supplier_B",
+     "Supplier_H",
+     "Supplier_I"
+    ],
+    "steps": [
+     [
+      "request via Tier 1 and Tier 2 10d",
+      "existing smelter PCF (A) 5d"
+     ],
+     [
+      "origin-link documents 10d"
+     ],
+     [
+      "other claims 30d"
+     ]
+    ],
+    "lead_days": 30,
+    "slack_days": 0,
+    "feasible": true,
+    "at_risk": true
+   },
+   "shared_B": {
+    "cost": 2.6,
+    "cost_items": {
+     "smelter_pcf": 1.0,
+     "origin_links": 0.6,
+     "other_claims": 1.0
+    },
+    "requests": 3,
+    "covers": "smelter PCF once; origin link per supplier",
+    "still_open": [
+     "Supplier_B recycled_share"
+    ],
+    "reusable_for": [
+     "Supplier_B",
+     "Supplier_H",
+     "Supplier_I"
+    ],
+    "steps": [
+     [
+      "request via Tier 1 and Tier 2 10d",
+      "new smelter verification (B) 30d"
+     ],
+     [
+      "origin-link documents 10d"
+     ],
+     [
+      "other claims 30d"
+     ]
+    ],
+    "lead_days": 40,
+    "slack_days": -10,
+    "feasible": false,
+    "at_risk": false
+   }
+  },
+  "recommended": {
+   "smelter_has_verified_pcf": "shared_A",
+   "smelter_needs_new_verification": "separate"
+  },
+  "next_round": "shared_B",
+  "note": "JLR has no contract with the smelter; requests go through Tier 1 and Tier 2. Savings in later rounds are not counted in this round."
+ },
+ "svs_late": {
+  "smelter": "Unknown_B",
+  "suppliers": [
+   "Supplier_B",
+   "Supplier_H",
+   "Supplier_I"
+  ],
+  "comparisons_changed": [
+   "bracket",
+   "cover"
+  ],
+  "deadline": "2026-12-08",
+  "days_left": 18,
+  "params": {
+   "link_cost": 0.2,
+   "hop_days": 10,
+   "link_days": 10,
+   "residual_cost": 1.0,
+   "residual_days": 30
+  },
+  "routes": {
+   "separate": {
+    "cost": 3.0,
+    "requests": 3,
+    "covers": "all claims, per supplier",
+    "steps": [
+     [
+      "supplier verification (B) 30d"
+     ]
+    ],
+    "lead_days": 30,
+    "slack_days": -12,
+    "feasible": false,
+    "at_risk": false
+   },
+   "shared_A": {
+    "cost": 1.6,
+    "cost_items": {
+     "smelter_pcf": 0.0,
+     "origin_links": 0.6,
+     "other_claims": 1.0
+    },
+    "requests": 3,
+    "covers": "smelter PCF once; origin link per supplier",
+    "still_open": [
+     "Supplier_B recycled_share"
+    ],
+    "reusable_for": [
+     "Supplier_B",
+     "Supplier_H",
+     "Supplier_I"
+    ],
+    "steps": [
+     [
+      "request via Tier 1 and Tier 2 10d",
+      "existing smelter PCF (A) 5d"
+     ],
+     [
+      "origin-link documents 10d"
+     ],
+     [
+      "other claims 30d"
+     ]
+    ],
+    "lead_days": 30,
+    "slack_days": -12,
+    "feasible": false,
+    "at_risk": false
+   },
+   "shared_B": {
+    "cost": 2.6,
+    "cost_items": {
+     "smelter_pcf": 1.0,
+     "origin_links": 0.6,
+     "other_claims": 1.0
+    },
+    "requests": 3,
+    "covers": "smelter PCF once; origin link per supplier",
+    "still_open": [
+     "Supplier_B recycled_share"
+    ],
+    "reusable_for": [
+     "Supplier_B",
+     "Supplier_H",
+     "Supplier_I"
+    ],
+    "steps": [
+     [
+      "request via Tier 1 and Tier 2 10d",
+      "new smelter verification (B) 30d"
+     ],
+     [
+      "origin-link documents 10d"
+     ],
+     [
+      "other claims 30d"
+     ]
+    ],
+    "lead_days": 40,
+    "slack_days": -22,
+    "feasible": false,
+    "at_risk": false
+   }
+  },
+  "recommended": {
+   "smelter_has_verified_pcf": null,
+   "smelter_needs_new_verification": null
+  },
+  "next_round": "shared_B",
+  "note": "JLR has no contract with the smelter; requests go through Tier 1 and Tier 2. Savings in later rounds are not counted in this round."
+ },
+ "routesens": [
+  {
+   "param": "link_cost",
+   "value": 0.1,
+   "separate": [
+    3.0,
+    30,
+    0
+   ],
+   "shared_A": [
+    1.3,
+    30,
+    0
+   ],
+   "shared_B": [
+    2.3,
+    40,
+    -10
+   ],
+   "recommended": {
+    "smelter_has_verified_pcf": "shared_A",
+    "smelter_needs_new_verification": "separate"
+   }
+  },
+  {
+   "param": "link_cost",
+   "value": 0.2,
+   "separate": [
+    3.0,
+    30,
+    0
+   ],
+   "shared_A": [
+    1.6,
+    30,
+    0
+   ],
+   "shared_B": [
+    2.6,
+    40,
+    -10
+   ],
+   "recommended": {
+    "smelter_has_verified_pcf": "shared_A",
+    "smelter_needs_new_verification": "separate"
+   }
+  },
+  {
+   "param": "link_cost",
+   "value": 0.5,
+   "separate": [
+    3.0,
+    30,
+    0
+   ],
+   "shared_A": [
+    2.5,
+    30,
+    0
+   ],
+   "shared_B": [
+    3.5,
+    40,
+    -10
+   ],
+   "recommended": {
+    "smelter_has_verified_pcf": "shared_A",
+    "smelter_needs_new_verification": "separate"
+   }
+  },
+  {
+   "param": "hop_days",
+   "value": 5,
+   "separate": [
+    3.0,
+    30,
+    0
+   ],
+   "shared_A": [
+    1.6,
+    30,
+    0
+   ],
+   "shared_B": [
+    2.6,
+    35,
+    -5
+   ],
+   "recommended": {
+    "smelter_has_verified_pcf": "shared_A",
+    "smelter_needs_new_verification": "separate"
+   }
+  },
+  {
+   "param": "hop_days",
+   "value": 10,
+   "separate": [
+    3.0,
+    30,
+    0
+   ],
+   "shared_A": [
+    1.6,
+    30,
+    0
+   ],
+   "shared_B": [
+    2.6,
+    40,
+    -10
+   ],
+   "recommended": {
+    "smelter_has_verified_pcf": "shared_A",
+    "smelter_needs_new_verification": "separate"
+   }
+  },
+  {
+   "param": "hop_days",
+   "value": 20,
+   "separate": [
+    3.0,
+    30,
+    0
+   ],
+   "shared_A": [
+    1.6,
+    30,
+    0
+   ],
+   "shared_B": [
+    2.6,
+    50,
+    -20
+   ],
+   "recommended": {
+    "smelter_has_verified_pcf": "shared_A",
+    "smelter_needs_new_verification": "separate"
+   }
+  },
+  {
+   "param": "residual_cost",
+   "value": 0.5,
+   "separate": [
+    3.0,
+    30,
+    0
+   ],
+   "shared_A": [
+    1.1,
+    30,
+    0
+   ],
+   "shared_B": [
+    2.1,
+    40,
+    -10
+   ],
+   "recommended": {
+    "smelter_has_verified_pcf": "shared_A",
+    "smelter_needs_new_verification": "separate"
+   }
+  },
+  {
+   "param": "residual_cost",
+   "value": 1.0,
+   "separate": [
+    3.0,
+    30,
+    0
+   ],
+   "shared_A": [
+    1.6,
+    30,
+    0
+   ],
+   "shared_B": [
+    2.6,
+    40,
+    -10
+   ],
+   "recommended": {
+    "smelter_has_verified_pcf": "shared_A",
+    "smelter_needs_new_verification": "separate"
+   }
+  },
+  {
+   "param": "residual_cost",
+   "value": 1.5,
+   "separate": [
+    3.0,
+    30,
+    0
+   ],
+   "shared_A": [
+    2.1,
+    30,
+    0
+   ],
+   "shared_B": [
+    3.1,
+    40,
+    -10
+   ],
+   "recommended": {
+    "smelter_has_verified_pcf": "shared_A",
+    "smelter_needs_new_verification": "separate"
+   }
+  },
+  {
+   "param": "residual_days",
+   "value": 5,
+   "separate": [
+    3.0,
+    30,
+    0
+   ],
+   "shared_A": [
+    1.6,
+    15,
+    15
+   ],
+   "shared_B": [
+    2.6,
+    40,
+    -10
+   ],
+   "recommended": {
+    "smelter_has_verified_pcf": "shared_A",
+    "smelter_needs_new_verification": "separate"
+   }
+  },
+  {
+   "param": "residual_days",
+   "value": 30,
+   "separate": [
+    3.0,
+    30,
+    0
+   ],
+   "shared_A": [
+    1.6,
+    30,
+    0
+   ],
+   "shared_B": [
+    2.6,
+    40,
+    -10
+   ],
+   "recommended": {
+    "smelter_has_verified_pcf": "shared_A",
+    "smelter_needs_new_verification": "separate"
+   }
+  }
+ ],
+ "cap": {
+  "mode": "cap",
+  "params": {
+   "N": 40,
+   "d": 0.3,
+   "V": 1.0,
+   "h": 0.1,
+   "h_t": 0.02,
+   "r": 0.2,
+   "a": 0.2,
+   "m": 0.3,
+   "F": 2.0,
+   "K": 15,
+   "B": 16.5
+  },
+  "baseline": {
+   "cost_items": {
+    "verifications": 15.0,
+    "human_review": 1.5
+   },
+   "cost": 16.5,
+   "requests_to_suppliers": 15,
+   "expected_relevant_resolved": 4.5,
+   "cost_per_relevant_gap": 3.67,
+   "share_of_relevant_resolved": 0.38
+  },
+  "carbontrace": {
+   "cost_items": {
+    "fixed_F": 2.0,
+    "triage_all_records": 0.8,
+    "reuse_applicability_checks": 0.48,
+    "verifications": 9.6,
+    "full_human_review": 0.288,
+    "rule_approval": 0.134
+   },
+   "cost": 13.302,
+   "requests_to_suppliers": 9.6,
+   "expected_relevant_resolved": 12.0,
+   "cost_per_relevant_gap": 1.11,
+   "share_of_relevant_resolved": 1.0
+  },
+  "carbontrace_costs_more": false,
+  "carbontrace_worse_per_gap": false,
+  "carbontrace_resolves_fewer": false
+ },
+ "budget": {
+  "mode": "budget",
+  "params": {
+   "N": 40,
+   "d": 0.3,
+   "V": 1.0,
+   "h": 0.1,
+   "h_t": 0.02,
+   "r": 0.2,
+   "a": 0.2,
+   "m": 0.3,
+   "F": 2.0,
+   "K": 15,
+   "B": 16.5
+  },
+  "baseline": {
+   "cost_items": {
+    "verifications": 15.0,
+    "human_review": 1.5
+   },
+   "cost": 16.5,
+   "requests_to_suppliers": 15.0,
+   "expected_relevant_resolved": 4.5,
+   "cost_per_relevant_gap": 3.67,
+   "share_of_relevant_resolved": 0.38
+  },
+  "carbontrace": {
+   "cost_items": {
+    "fixed_F": 2.0,
+    "triage_all_records": 0.8,
+    "reuse_applicability_checks": 0.48,
+    "verifications": 9.6,
+    "full_human_review": 0.288,
+    "rule_approval": 0.134
+   },
+   "cost": 13.302,
+   "requests_to_suppliers": 9.6,
+   "expected_relevant_resolved": 12.0,
+   "cost_per_relevant_gap": 1.11,
+   "share_of_relevant_resolved": 1.0
+  },
+  "carbontrace_costs_more": false,
+  "carbontrace_worse_per_gap": false,
+  "carbontrace_resolves_fewer": false
+ },
+ "sweep": {
+  "cap": [
+   {
+    "param": "N",
+    "value": 3,
+    "baseline": {
+     "cost": 3.3,
+     "expected_relevant_resolved": 0.9,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 2.848,
+     "expected_relevant_resolved": 0.9,
+     "cost_per_relevant_gap": 3.16
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "N",
+    "value": 5,
+    "baseline": {
+     "cost": 5.5,
+     "expected_relevant_resolved": 1.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 3.413,
+     "expected_relevant_resolved": 1.5,
+     "cost_per_relevant_gap": 2.28
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "N",
+    "value": 10,
+    "baseline": {
+     "cost": 11.0,
+     "expected_relevant_resolved": 3.0,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 4.826,
+     "expected_relevant_resolved": 3.0,
+     "cost_per_relevant_gap": 1.61
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "N",
+    "value": 20,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 7.651,
+     "expected_relevant_resolved": 6.0,
+     "cost_per_relevant_gap": 1.28
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "N",
+    "value": 40,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 13.302,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.11
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "N",
+    "value": 80,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 20.22,
+     "expected_relevant_resolved": 19.8,
+     "cost_per_relevant_gap": 1.02
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "N",
+    "value": 160,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 22.78,
+     "expected_relevant_resolved": 24.6,
+     "cost_per_relevant_gap": 0.93
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "d",
+    "value": 0.1,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 1.5,
+     "cost_per_relevant_gap": 11.0
+    },
+    "carbontrace": {
+     "cost": 6.301,
+     "expected_relevant_resolved": 4.0,
+     "cost_per_relevant_gap": 1.58
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "d",
+    "value": 0.3,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 13.302,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.11
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "d",
+    "value": 0.5,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 7.5,
+     "cost_per_relevant_gap": 2.2
+    },
+    "carbontrace": {
+     "cost": 19.26,
+     "expected_relevant_resolved": 19.0,
+     "cost_per_relevant_gap": 1.01
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "d",
+    "value": 0.7,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 10.5,
+     "cost_per_relevant_gap": 1.57
+    },
+    "carbontrace": {
+     "cost": 19.58,
+     "expected_relevant_resolved": 20.6,
+     "cost_per_relevant_gap": 0.95
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "d",
+    "value": 1.0,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 15.0,
+     "cost_per_relevant_gap": 1.1
+    },
+    "carbontrace": {
+     "cost": 20.06,
+     "expected_relevant_resolved": 23.0,
+     "cost_per_relevant_gap": 0.87
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "V",
+    "value": 0.2,
+    "baseline": {
+     "cost": 4.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 1.0
+    },
+    "carbontrace": {
+     "cost": 5.622,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 0.47
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "V",
+    "value": 0.5,
+    "baseline": {
+     "cost": 9.0,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 2.0
+    },
+    "carbontrace": {
+     "cost": 8.502,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 0.71
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "V",
+    "value": 1.0,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 13.302,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.11
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "V",
+    "value": 2.0,
+    "baseline": {
+     "cost": 31.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 7.0
+    },
+    "carbontrace": {
+     "cost": 22.902,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.91
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "r",
+    "value": 0.0,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 15.328,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.28
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "r",
+    "value": 0.2,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 13.302,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.11
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "r",
+    "value": 0.5,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 10.264,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 0.86
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "r",
+    "value": 0.8,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 7.226,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 0.6
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "a",
+    "value": 0.05,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 12.942,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.08
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "a",
+    "value": 0.2,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 13.302,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.11
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "a",
+    "value": 0.5,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 14.022,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.17
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "m",
+    "value": 0.0,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 13.072,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.09
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "m",
+    "value": 0.3,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 13.302,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.11
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "m",
+    "value": 0.6,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 13.533,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.13
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "m",
+    "value": 1.0,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 13.84,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.15
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "F",
+    "value": 0.5,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 11.802,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 0.98
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "F",
+    "value": 2.0,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 13.302,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.11
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "F",
+    "value": 5.0,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 16.302,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.36
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "F",
+    "value": 10.0,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 21.302,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.78
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   }
+  ],
+  "budget": [
+   {
+    "param": "N",
+    "value": 3,
+    "baseline": {
+     "cost": 3.3,
+     "expected_relevant_resolved": 0.9,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 2.848,
+     "expected_relevant_resolved": 0.9,
+     "cost_per_relevant_gap": 3.16
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "N",
+    "value": 5,
+    "baseline": {
+     "cost": 5.5,
+     "expected_relevant_resolved": 1.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 3.413,
+     "expected_relevant_resolved": 1.5,
+     "cost_per_relevant_gap": 2.28
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "N",
+    "value": 10,
+    "baseline": {
+     "cost": 11.0,
+     "expected_relevant_resolved": 3.0,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 4.826,
+     "expected_relevant_resolved": 3.0,
+     "cost_per_relevant_gap": 1.61
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "N",
+    "value": 20,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 7.651,
+     "expected_relevant_resolved": 6.0,
+     "cost_per_relevant_gap": 1.28
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "N",
+    "value": 40,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 13.302,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.11
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "N",
+    "value": 80,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 16.24,
+     "cost_per_relevant_gap": 1.02
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "N",
+    "value": 160,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 18.58,
+     "cost_per_relevant_gap": 0.89
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "d",
+    "value": 0.1,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 1.5,
+     "cost_per_relevant_gap": 11.0
+    },
+    "carbontrace": {
+     "cost": 6.301,
+     "expected_relevant_resolved": 4.0,
+     "cost_per_relevant_gap": 1.58
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "d",
+    "value": 0.3,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 13.302,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.11
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "d",
+    "value": 0.5,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 7.5,
+     "cost_per_relevant_gap": 2.2
+    },
+    "carbontrace": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 16.36,
+     "cost_per_relevant_gap": 1.01
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "d",
+    "value": 0.7,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 10.5,
+     "cost_per_relevant_gap": 1.57
+    },
+    "carbontrace": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 17.65,
+     "cost_per_relevant_gap": 0.93
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "d",
+    "value": 1.0,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 15.0,
+     "cost_per_relevant_gap": 1.1
+    },
+    "carbontrace": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 19.59,
+     "cost_per_relevant_gap": 0.84
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "V",
+    "value": 0.2,
+    "baseline": {
+     "cost": 12.0,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.0
+    },
+    "carbontrace": {
+     "cost": 5.622,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 0.47
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "V",
+    "value": 0.5,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 8.25,
+     "cost_per_relevant_gap": 2.0
+    },
+    "carbontrace": {
+     "cost": 8.502,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 0.71
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "V",
+    "value": 1.0,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 13.302,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.11
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "V",
+    "value": 2.0,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 2.36,
+     "cost_per_relevant_gap": 6.99
+    },
+    "carbontrace": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 8.87,
+     "cost_per_relevant_gap": 1.86
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "r",
+    "value": 0.0,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 15.328,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.28
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "r",
+    "value": 0.2,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 13.302,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.11
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "r",
+    "value": 0.5,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 10.264,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 0.86
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "r",
+    "value": 0.8,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 7.226,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 0.6
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "a",
+    "value": 0.05,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 12.942,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.08
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "a",
+    "value": 0.2,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 13.302,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.11
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "a",
+    "value": 0.5,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 14.022,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.17
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "m",
+    "value": 0.0,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 13.072,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.09
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "m",
+    "value": 0.3,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 13.302,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.11
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "m",
+    "value": 0.6,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 13.533,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.13
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "m",
+    "value": 1.0,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 13.84,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.15
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "F",
+    "value": 0.5,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 11.802,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 0.98
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "F",
+    "value": 2.0,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 13.302,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.11
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "F",
+    "value": 5.0,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 16.302,
+     "expected_relevant_resolved": 12.0,
+     "cost_per_relevant_gap": 1.36
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   },
+   {
+    "param": "F",
+    "value": 10.0,
+    "baseline": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 4.5,
+     "cost_per_relevant_gap": 3.67
+    },
+    "carbontrace": {
+     "cost": 16.5,
+     "expected_relevant_resolved": 7.4,
+     "cost_per_relevant_gap": 2.23
+    },
+    "carbontrace_worse_per_gap": false,
+    "carbontrace_resolves_fewer": false
+   }
+  ]
+ },
+ "losing": [
+  {
+   "scenario": "very small round",
+   "params": {
+    "N": 2
+   },
+   "mode": "cap",
+   "baseline_cost": 2.2,
+   "carbontrace_cost": 2.565,
+   "baseline_resolved": 0.6,
+   "carbontrace_resolved": 0.6,
+   "costs_more": true,
+   "worse_per_gap": true,
+   "resolves_fewer": false
+  },
+  {
+   "scenario": "very small round",
+   "params": {
+    "N": 2
+   },
+   "mode": "budget",
+   "baseline_cost": 2.2,
+   "carbontrace_cost": 2.565,
+   "baseline_resolved": 0.6,
+   "carbontrace_resolved": 0.6,
+   "costs_more": true,
+   "worse_per_gap": true,
+   "resolves_fewer": false
+  },
+  {
+   "scenario": "small round, cheap verification",
+   "params": {
+    "N": 8,
+    "V": 0.2
+   },
+   "mode": "cap",
+   "baseline_cost": 2.4,
+   "carbontrace_cost": 2.724,
+   "baseline_resolved": 2.4,
+   "carbontrace_resolved": 2.4,
+   "costs_more": true,
+   "worse_per_gap": true,
+   "resolves_fewer": false
+  },
+  {
+   "scenario": "small round, cheap verification",
+   "params": {
+    "N": 8,
+    "V": 0.2
+   },
+   "mode": "budget",
+   "baseline_cost": 2.4,
+   "carbontrace_cost": 2.724,
+   "baseline_resolved": 2.4,
+   "carbontrace_resolved": 2.4,
+   "costs_more": true,
+   "worse_per_gap": true,
+   "resolves_fewer": false
+  },
+  {
+   "scenario": "everything relevant, nothing reusable",
+   "params": {
+    "N": 20,
+    "d": 1.0,
+    "r": 0.0
+   },
+   "mode": "cap",
+   "baseline_cost": 16.5,
+   "carbontrace_cost": 18.06,
+   "baseline_resolved": 15.0,
+   "carbontrace_resolved": 15.0,
+   "costs_more": true,
+   "worse_per_gap": true,
+   "resolves_fewer": false
+  },
+  {
+   "scenario": "everything relevant, nothing reusable",
+   "params": {
+    "N": 20,
+    "d": 1.0,
+    "r": 0.0
+   },
+   "mode": "budget",
+   "baseline_cost": 16.5,
+   "carbontrace_cost": 16.5,
+   "baseline_resolved": 15.0,
+   "carbontrace_resolved": 13.51,
+   "costs_more": false,
+   "worse_per_gap": true,
+   "resolves_fewer": true
+  },
+  {
+   "scenario": "everything relevant, nothing reusable, large",
+   "params": {
+    "N": 40,
+    "d": 1.0,
+    "r": 0.0
+   },
+   "mode": "cap",
+   "baseline_cost": 16.5,
+   "carbontrace_cost": 18.46,
+   "baseline_resolved": 15.0,
+   "carbontrace_resolved": 15.0,
+   "costs_more": true,
+   "worse_per_gap": true,
+   "resolves_fewer": false
+  },
+  {
+   "scenario": "everything relevant, nothing reusable, large",
+   "params": {
+    "N": 40,
+    "d": 1.0,
+    "r": 0.0
+   },
+   "mode": "budget",
+   "baseline_cost": 16.5,
+   "carbontrace_cost": 16.5,
+   "baseline_resolved": 15.0,
+   "carbontrace_resolved": 13.12,
+   "costs_more": false,
+   "worse_per_gap": true,
+   "resolves_fewer": true
+  },
+  {
+   "scenario": "high fixed cost, small round",
+   "params": {
+    "N": 5,
+    "F": 5.0
+   },
+   "mode": "cap",
+   "baseline_cost": 5.5,
+   "carbontrace_cost": 6.413,
+   "baseline_resolved": 1.5,
+   "carbontrace_resolved": 1.5,
+   "costs_more": true,
+   "worse_per_gap": true,
+   "resolves_fewer": false
+  },
+  {
+   "scenario": "high fixed cost, small round",
+   "params": {
+    "N": 5,
+    "F": 5.0
+   },
+   "mode": "budget",
+   "baseline_cost": 5.5,
+   "carbontrace_cost": 6.413,
+   "baseline_resolved": 1.5,
+   "carbontrace_resolved": 1.5,
+   "costs_more": true,
+   "worse_per_gap": true,
+   "resolves_fewer": false
+  },
+  {
+   "scenario": "all cases need full review, small round",
+   "params": {
+    "N": 5,
+    "m": 1.0
+   },
+   "mode": "cap",
+   "baseline_cost": 5.5,
+   "carbontrace_cost": 3.48,
+   "baseline_resolved": 1.5,
+   "carbontrace_resolved": 1.5,
+   "costs_more": false,
+   "worse_per_gap": false,
+   "resolves_fewer": false
+  },
+  {
+   "scenario": "all cases need full review, small round",
+   "params": {
+    "N": 5,
+    "m": 1.0
+   },
+   "mode": "budget",
+   "baseline_cost": 5.5,
+   "carbontrace_cost": 3.48,
+   "baseline_resolved": 1.5,
+   "carbontrace_resolved": 1.5,
+   "costs_more": false,
+   "worse_per_gap": false,
+   "resolves_fewer": false
+  },
+  {
+   "scenario": "reuse checks as costly as a verification",
+   "params": {
+    "a": 1.0,
+    "r": 0.5
+   },
+   "mode": "cap",
+   "baseline_cost": 16.5,
+   "carbontrace_cost": 15.064,
+   "baseline_resolved": 4.5,
+   "carbontrace_resolved": 12.0,
+   "costs_more": false,
+   "worse_per_gap": false,
+   "resolves_fewer": false
+  },
+  {
+   "scenario": "reuse checks as costly as a verification",
+   "params": {
+    "a": 1.0,
+    "r": 0.5
+   },
+   "mode": "budget",
+   "baseline_cost": 16.5,
+   "carbontrace_cost": 15.064,
+   "baseline_resolved": 4.5,
+   "carbontrace_resolved": 12.0,
+   "costs_more": false,
+   "worse_per_gap": false,
+   "resolves_fewer": false
+  }
+ ],
+ "breakeven": [
+  2.4,
+  3.6,
+  55.6,
+  9.5,
+  6.1,
+  2.5
+ ],
+ "demo": {
+  "untrusted": [
+   "Supplier_B",
+   "Supplier_D",
+   "Supplier_H",
+   "Supplier_I",
+   "Supplier_K"
+  ],
+  "relevant": [
+   "Supplier_B",
+   "Supplier_H",
+   "Supplier_I"
+  ],
+  "result": {
+   "mode": "cap",
+   "params": {
+    "N": 5,
+    "d": 0.6,
+    "V": 1.0,
+    "h": 0.1,
+    "h_t": 0.02,
+    "r": 0.0,
+    "a": 0.2,
+    "m": 0.3,
+    "F": 2.0,
+    "K": 15,
+    "B": 16.5
+   },
+   "baseline": {
+    "cost_items": {
+     "verifications": 5.0,
+     "human_review": 0.5
+    },
+    "cost": 5.5,
+    "requests_to_suppliers": 5,
+    "expected_relevant_resolved": 3.0,
+    "cost_per_relevant_gap": 1.83,
+    "share_of_relevant_resolved": 1.0
+   },
+   "carbontrace": {
+    "cost_items": {
+     "fixed_F": 2.0,
+     "triage_all_records": 0.1,
+     "reuse_applicability_checks": 0.0,
+     "verifications": 3.0,
+     "full_human_review": 0.09,
+     "rule_approval": 0.042
+    },
+    "cost": 5.232,
+    "requests_to_suppliers": 3.0,
+    "expected_relevant_resolved": 3.0,
+    "cost_per_relevant_gap": 1.74,
+    "share_of_relevant_resolved": 1.0
+   },
+   "carbontrace_costs_more": false,
+   "carbontrace_worse_per_gap": false,
+   "carbontrace_resolves_fewer": false
+  }
+ },
+ "bench": {
+  "group": {
+   "Supplier_A": 9.32,
+   "Supplier_C": 5.33,
+   "Supplier_E": 5.18,
+   "Supplier_F": 3.43,
+   "Supplier_G": 11.91
+  },
+  "scenarios": {
+   "P10": {
+    "per_kg": 4.13,
+    "comparisons": {
+     "bracket": {
+      "target_value": {
+       "Bracket_T1A": 33.04,
+       "Bracket_T1B": 33.04
+      },
+      "target_status": {
+       "Bracket_T1A": false,
+       "Bracket_T1B": false
+      },
+      "lower_carbon": "Bracket_T1B",
+      "decision": "suggest_pause",
+      "ranking_changed": false,
+      "target_status_changed": [
+       "Bracket_T1B"
+      ],
+      "decision_changed": true
+     },
+     "cover": {
+      "target_value": {
+       "Cover_T1D": 24.78,
+       "Cover_T1E": 24.78
+      },
+      "target_status": {
+       "Cover_T1D": true,
+       "Cover_T1E": false
+      },
+      "lower_carbon": "Cover_T1D",
+      "decision": "needs_human_review",
+      "ranking_changed": false,
+      "target_status_changed": [
+       "Cover_T1E"
+      ],
+      "decision_changed": false
+     },
+     "housing": {
+      "target_value": {
+       "Housing_T1C": 12.39
+      },
+      "target_status": {
+       "Housing_T1C": false
+      },
+      "lower_carbon": null,
+      "decision": "suggest_pause",
+      "ranking_changed": false,
+      "target_status_changed": [],
+      "decision_changed": false
+     }
+    }
+   },
+   "P25": {
+    "per_kg": 5.18,
+    "comparisons": {
+     "bracket": {
+      "target_value": {
+       "Bracket_T1A": 41.44,
+       "Bracket_T1B": 41.44
+      },
+      "target_status": {
+       "Bracket_T1A": false,
+       "Bracket_T1B": true
+      },
+      "lower_carbon": "Bracket_T1B",
+      "decision": "needs_human_review",
+      "ranking_changed": false,
+      "target_status_changed": [],
+      "decision_changed": false
+     },
+     "cover": {
+      "target_value": {
+       "Cover_T1D": 31.08,
+       "Cover_T1E": 31.08
+      },
+      "target_status": {
+       "Cover_T1D": true,
+       "Cover_T1E": true
+      },
+      "lower_carbon": "Cover_T1D",
+      "decision": "needs_human_review",
+      "ranking_changed": false,
+      "target_status_changed": [],
+      "decision_changed": false
+     },
+     "housing": {
+      "target_value": {
+       "Housing_T1C": 15.54
+      },
+      "target_status": {
+       "Housing_T1C": false
+      },
+      "lower_carbon": null,
+      "decision": "suggest_pause",
+      "ranking_changed": false,
+      "target_status_changed": [],
+      "decision_changed": false
+     }
+    }
+   },
+   "P50": {
+    "per_kg": 5.33,
+    "comparisons": {
+     "bracket": {
+      "target_value": {
+       "Bracket_T1A": 42.64,
+       "Bracket_T1B": 42.64
+      },
+      "target_status": {
+       "Bracket_T1A": true,
+       "Bracket_T1B": true
+      },
+      "lower_carbon": "Bracket_T1B",
+      "decision": "needs_human_review",
+      "ranking_changed": false,
+      "target_status_changed": [
+       "Bracket_T1A"
+      ],
+      "decision_changed": false
+     },
+     "cover": {
+      "target_value": {
+       "Cover_T1D": 31.98,
+       "Cover_T1E": 31.98
+      },
+      "target_status": {
+       "Cover_T1D": true,
+       "Cover_T1E": true
+      },
+      "lower_carbon": "Cover_T1D",
+      "decision": "needs_human_review",
+      "ranking_changed": false,
+      "target_status_changed": [],
+      "decision_changed": false
+     },
+     "housing": {
+      "target_value": {
+       "Housing_T1C": 15.99
+      },
+      "target_status": {
+       "Housing_T1C": false
+      },
+      "lower_carbon": null,
+      "decision": "suggest_pause",
+      "ranking_changed": false,
+      "target_status_changed": [],
+      "decision_changed": false
+     }
+    }
+   }
+  },
+  "decision_sensitive_to_benchmark": {
+   "bracket": true,
+   "cover": true,
+   "housing": false
+  }
+ },
+ "loo": {
+  "p25_per_kg": 5.18,
+  "rows": [
+   {
+    "left_out": "Supplier_A",
+    "pcf": 9.32,
+    "p25_per_kg": 4.7425,
+    "change_per_kg": -0.4375,
+    "status_changes": {
+     "cover": [
+      "Cover_T1E"
+     ]
+    },
+    "decision_changes": {}
+   },
+   {
+    "left_out": "Supplier_C",
+    "pcf": 5.33,
+    "p25_per_kg": 4.7425,
+    "change_per_kg": -0.4375,
+    "status_changes": {
+     "cover": [
+      "Cover_T1E"
+     ]
+    },
+    "decision_changes": {}
+   },
+   {
+    "left_out": "Supplier_E",
+    "pcf": 5.18,
+    "p25_per_kg": 4.855,
+    "change_per_kg": -0.325,
+    "status_changes": {
+     "cover": [
+      "Cover_T1E"
+     ]
+    },
+    "decision_changes": {}
+   },
+   {
+    "left_out": "Supplier_F",
+    "pcf": 3.43,
+    "p25_per_kg": 5.2925,
+    "change_per_kg": 0.1125,
+    "status_changes": {
+     "bracket": [
+      "Bracket_T1A"
+     ]
+    },
+    "decision_changes": {}
+   },
+   {
+    "left_out": "Supplier_G",
+    "pcf": 11.91,
+    "p25_per_kg": 4.7425,
+    "change_per_kg": -0.4375,
+    "status_changes": {
+     "cover": [
+      "Cover_T1E"
+     ]
+    },
+    "decision_changes": {}
+   }
+  ],
+  "range_per_kg": [
+   4.7425,
+   5.2925
+  ],
+  "largest_effect": [
+   "Supplier_A",
+   "Supplier_C",
+   "Supplier_G"
+  ]
+ }
+}

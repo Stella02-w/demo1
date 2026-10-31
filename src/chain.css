@@ -1,0 +1,87 @@
+/* Impact chain, node statements, the AI-suggested link and the shared-source block. Used by Sourcing and Network. */
+svg.chain .zone{fill:color-mix(in srgb,var(--amber) 7%,transparent);stroke:color-mix(in srgb,var(--amber) 22%,transparent);stroke-dasharray:3 3}
+svg.chain .ed.reach{stroke:var(--amber)}svg.chain .ed.ok{stroke:color-mix(in srgb,var(--teal) 70%,transparent)}svg.chain .nd.okd circle{fill:var(--teal)!important}svg.chain .nd.src.okd circle{stroke:var(--teal)!important}
+svg.chain .nd.src circle:not(.ring){fill:var(--ink);stroke:var(--amber);stroke-width:2.5}
+svg.chain .nd.reach circle{fill:var(--amber)}svg.chain .nd.up circle{fill:var(--mut)}
+svg.chain .nd.risk circle:not(.ring){fill:var(--red)}svg.chain .nd.risk text{fill:var(--ink)}
+svg.chain .ring{fill:none!important;stroke-width:1.5!important;stroke-dasharray:3 2}
+svg.chain .nd.risk .ring{stroke:var(--red)!important}svg.chain .nd.na .ring{stroke:var(--dim)!important}svg.chain .nd.na circle:not(.ring){fill:var(--dim)}
+svg.chain .nd .nt{font-size:9.5px;fill:var(--amber)}svg.chain .nd .nt.red{fill:var(--red)}svg.chain .nd.na .nt{fill:var(--dim)}
+.clg .src{background:var(--ink);box-shadow:0 0 0 2px var(--amber)}.clg .reach{background:var(--amber)}.clg .risk{background:var(--red)}.clg .na{background:none;border:1px dashed var(--dim);box-sizing:border-box}
+.tags{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:2px}
+.tg{line-height:1.4;white-space:nowrap;font-size:11.5px;font-weight:500;padding:4px 9px;border-radius:7px;background:rgba(255,255,255,.07);color:var(--mut)}
+.tg.warn{color:var(--amber);background:color-mix(in srgb,var(--amber) 13%,transparent)}.tg.ok{color:var(--teal);background:color-mix(in srgb,var(--teal) 13%,transparent)}.tg.risk{color:var(--red);background:color-mix(in srgb,var(--red) 14%,transparent)}
+.cf{margin-top:8px;font-size:11.5px}
+.nx2 .k{margin-bottom:2px}.nx2{margin-top:14px}
+.chw{margin:14px -4px 0;overflow:visible}
+svg.chain{width:100%;height:auto;overflow:visible;display:block;margin-top:14px}
+svg.chain .hd text{font-size:9.5px;fill:var(--dim);letter-spacing:.04em}
+svg.chain .hd .rl{font-size:8px;letter-spacing:0;opacity:.75}
+svg.chain .ed{fill:none;stroke:rgba(255,255,255,.16);transition:opacity .2s,stroke .2s}
+svg.chain .ed.warm{stroke:color-mix(in srgb,var(--amber) 45%,transparent)}
+svg.chain .ed.lit{stroke:rgba(255,255,255,.55)}svg.chain .ed.lit.warm{stroke:var(--amber)}
+svg.chain .ed.dim,svg.chain .nd.dim{opacity:.18}
+svg.chain .nd{cursor:pointer;outline:none}
+svg.chain .nd circle{fill:var(--mut);stroke:var(--bg);stroke-width:2}
+svg.chain .nd text{font-size:10.5px;fill:var(--mut);paint-order:stroke;stroke:var(--panel);stroke-width:3px;stroke-linejoin:round}
+svg.chain .nd:hover text,svg.chain .nd:focus-visible text,svg.chain .nd.sel text{fill:var(--ink)}
+svg.chain .nd.sel circle{stroke:var(--ink);stroke-width:2}
+svg.chain .nd.chg circle{fill:var(--amber)}svg.chain .nd.noeff circle{fill:color-mix(in srgb,var(--amber) 35%,var(--dim))}svg.chain .nd.unk circle{fill:var(--blue,#64a8ff)}svg.chain .nd.ok circle{fill:var(--teal)}svg.chain .nd.none circle{fill:none;stroke:var(--dim);stroke-dasharray:2 2}
+.clg{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:11px;color:var(--dim);margin-top:10px}
+.clg i{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px}
+.clg .chg{background:var(--amber)}.clg .dec{background:color-mix(in srgb,var(--teal) 35%,var(--dim))}svg.chain .nd.dec circle{fill:color-mix(in srgb,var(--teal) 35%,var(--dim))}.clg .noeff{background:color-mix(in srgb,var(--amber) 35%,var(--dim))}.clg .unk{background:var(--blue,#64a8ff)}.clg .ok{background:var(--teal)}
+.stm{margin-top:14px;display:flex;flex-direction:column}
+.stm .sh1{font-size:15px;font-weight:600;line-height:1.4;letter-spacing:-.01em;margin-bottom:6px;text-wrap:balance}
+.stm>.k{margin:14px 0 2px}
+.stm .row b{text-align:right;font-weight:500;color:var(--ink);font-size:12.5px;line-height:1.5}
+.stm .row{font-size:12.5px}
+.sl{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;text-align:left;padding:10px 8px;border:0;border-top:1px solid var(--line);background:none;color:var(--ink);font:inherit;font-size:12.5px;cursor:pointer;border-radius:8px}
+.sl:hover{background:rgba(255,255,255,.04)}.sl .tag{flex:none}
+.nx2{display:flex;flex-direction:column;gap:2px;padding:8px 0;font-size:13px}
+/* AI-suggested link */
+:root{--ai:#b59cff}
+.chh{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.aichip{display:inline-flex;align-items:center;gap:6px;border:1px solid color-mix(in srgb,var(--ai) 45%,transparent);background:color-mix(in srgb,var(--ai) 10%,transparent);color:var(--ai);font:inherit;font-size:11.5px;font-weight:600;padding:5px 10px;border-radius:999px;cursor:pointer;white-space:nowrap;transition:background .2s}
+.aichip:hover{background:color-mix(in srgb,var(--ai) 20%,transparent)}
+.aichip.scan{cursor:default;background:linear-gradient(90deg,color-mix(in srgb,var(--ai) 8%,transparent) 0%,color-mix(in srgb,var(--ai) 30%,transparent) 50%,color-mix(in srgb,var(--ai) 8%,transparent) 100%);background-size:200% 100%;animation:aiscan 1s linear infinite}
+.aichip.scan .aisym{animation:aispin 1.2s linear infinite}
+@keyframes aiscan{to{background-position:-200% 0}}@keyframes aispin{to{transform:rotate(360deg)}}
+.aisym{display:inline-block;color:var(--ai)}
+svg.chain .ai .aip{fill:none;stroke:var(--ai);stroke-width:2;stroke-dasharray:4 3;animation:aiflow 1s linear infinite}
+svg.chain .ai .aik{fill:none;stroke:rgba(255,255,255,.7);stroke-width:1.6}
+svg.chain .nd.hl text{fill:var(--ink)}svg.chain .nd.hl circle{fill:var(--ink)}
+@keyframes aiflow{to{stroke-dashoffset:-14}}
+svg.chain .ai .aid{fill:#fff}
+svg.chain .ai .ain circle:not(.halo){fill:var(--ai)}svg.chain .ai .ain text{fill:var(--ink);font-weight:600}svg.chain .ai .ain .nt{fill:var(--ai);font-weight:400;font-size:9.5px}
+svg.chain .ai .halo{fill:color-mix(in srgb,var(--ai) 25%,transparent);stroke:none;transform-box:fill-box;transform-origin:center;animation:aihalo 2s ease-in-out infinite}
+@keyframes aihalo{50%{transform:scale(1.6);opacity:.3}}
+svg.chain .ai .aib{cursor:pointer}svg.chain .ai .aib circle{fill:var(--bg);stroke:var(--ai);stroke-width:1.5}svg.chain .ai .aib text{fill:var(--ai);font-size:9px;text-anchor:middle}
+svg.chain .ai.on .aib circle{fill:var(--ai)}svg.chain .ai.on .aib text{fill:var(--bg)}
+svg.chain .ai.dim{opacity:.25}
+svg.chain .ai.fresh .ain{transform-box:fill-box;transform-origin:center;animation:aipop .6s .9s cubic-bezier(.3,1.6,.5,1) both}
+svg.chain .ai.fresh .aib{transform-box:fill-box;transform-origin:center;animation:aipop .5s 1.1s cubic-bezier(.3,1.6,.5,1) both}
+svg.chain .ai.fresh .aip{stroke-dashoffset:0;animation:aidraw 1.1s ease-out both,aiflow 1s 1.1s linear infinite}
+svg.chain .ai.fresh .aik{animation:aifade .5s 1.2s both}
+@keyframes aipop{from{transform:scale(0);opacity:0}}@keyframes aifade{from{opacity:0}}@keyframes aidraw{from{opacity:0;clip-path:inset(0 100% 0 0)}to{opacity:1;clip-path:inset(0 0 0 0)}}
+.clg .ai{background:none;border:1.5px dashed var(--ai);box-sizing:border-box}
+.tg.aitg{color:var(--ai);background:color-mix(in srgb,var(--ai) 14%,transparent)}
+.sigs{display:flex;flex-direction:column;margin-top:12px;border-top:1px solid var(--line)}
+.sig{display:grid;grid-template-columns:1fr;gap:1px;padding:7px 0;border-bottom:1px solid var(--line);font-size:12.5px;line-height:1.45}
+.sig b{font-weight:600;color:var(--ink);font-size:12px}.sig span{color:var(--mut)}.sig em{font-style:normal;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:10.5px;color:var(--dim)}
+.aiact{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:12px}.aiact .btn,.aiact .btn2{margin:0}.aiact .btn2:only-child{grid-column:1/-1}
+.ailink{color:var(--ai);font-size:12px;text-decoration:none;margin-top:8px}.ailink:hover{text-decoration:underline}
+svg.chain .ai.cf .aip{stroke:var(--teal);stroke-dasharray:none;animation:none}svg.chain .ai.cf .ain circle:not(.halo){fill:var(--teal)}svg.chain .ai.cf .ain .nt{fill:var(--teal)}svg.chain .ai.cf .halo{display:none}
+.lev{display:flex;flex-direction:column;gap:2px;margin-top:16px;padding-top:12px;border-top:1px solid var(--line)}
+.levn{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:6px 0 8px}.levn div{display:flex;flex-direction:column;padding:8px 10px;border-radius:10px;background:rgba(255,255,255,.04)}.levn b{font-size:18px;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}.levn span{font-size:11px;color:var(--dim)}
+.gate{display:grid;grid-template-columns:18px 1fr;gap:8px;padding:7px 0;font-size:12px;color:var(--mut);border-top:1px solid var(--line)}.gate b{display:block;color:var(--ink);font-weight:500;font-size:12.5px}
+.gate i{width:16px;height:16px;border-radius:50%;border:1.5px dashed var(--dim);margin-top:2px;font-style:normal;font-size:9px;display:grid;place-items:center;color:#0a0a0b}.gate.ok i{background:var(--teal);border:0}
+.lev .btn2{margin-top:10px}
+.ltr{display:flex;flex-direction:column;gap:2px;margin-top:10px;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.035);border:1px solid var(--line)}.ltr .k{margin-top:6px}
+.lst{margin:2px 0 4px;padding-left:16px;font-size:12px;color:var(--mut);line-height:1.55}
+.doc1{display:flex;flex-direction:column;gap:2px;margin-top:10px;padding:10px 12px;border:1px dashed var(--line2);border-radius:10px;font-size:12.5px}.doc1 b{font-weight:500;color:var(--ink);font-family:"JetBrains Mono",ui-monospace,monospace;font-size:11.5px}.doc1 span{color:var(--dim);font-size:11.5px}
+.chks{display:flex;flex-direction:column;margin-top:6px}.chks div{display:flex;gap:8px;align-items:center;font-size:12.5px;color:var(--mut);padding:5px 0}.chks i{width:15px;height:15px;border-radius:50%;background:var(--teal);color:#0a0a0b;font-style:normal;font-size:9px;font-weight:700;display:grid;place-items:center}
+
+
+svg.chain .ai.off .aiu{fill:none;stroke:var(--dim);stroke-width:1.2;stroke-dasharray:1.5 3}
+svg.chain .ai.off .ain circle{fill:var(--mut)}svg.chain .ai.off .ain text{fill:var(--mut);font-weight:400}svg.chain .ai.off .ain .nt{fill:var(--dim)}
+svg.chain .ai.off .aik{stroke:rgba(255,255,255,.3)}

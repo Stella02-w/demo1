@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CarbonTrace Decision</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../src/ui.css">
+<link rel="stylesheet" href="../src/flow.css">
+<style>
+.dc{padding:24px clamp(16px,3vw,32px) 40px;display:flex;flex-direction:column;gap:20px}
+.kr{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.kr>div{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.kr .v{font-size:20px;font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dg{display:grid;grid-template-columns:minmax(0,1fr) 520px;gap:20px;align-items:start}
+.bd{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.col{display:flex;flex-direction:column;gap:10px;min-width:0}
+.col h3{margin:0;display:flex;justify-content:space-between;font-size:12.5px;font-weight:600;padding:0 2px 6px;border-bottom:2px solid var(--line2)}
+.col h3 em{font-style:normal;color:var(--dim);font-weight:500}
+.col.review h3{border-color:var(--amber)}.col.action h3{border-color:var(--red)}.col.waiting h3{border-color:var(--blue)}.col.ready h3{border-color:var(--teal)}
+.bc{display:flex;flex-direction:column;gap:4px;padding:12px;border-radius:12px;background:var(--panel);border:1px solid var(--line);text-decoration:none;color:var(--ink);transition:border-color .15s}
+.bc:hover{border-color:var(--line2)}
+.bc b{font-weight:600;font-size:13px}.bc span{font-size:12px;color:var(--mut)}.bc em{font-style:normal;font-size:11.5px;color:var(--dim)}
+.col .none{font-size:12px;color:var(--dim);padding:8px 2px}
+.br{position:sticky;top:112px;display:flex;flex-direction:column;gap:14px}
+.br .ab{position:static;border-top:0;padding:0;background:none}
+table.sc tr.lo td{background:color-mix(in srgb,var(--teal) 6%,transparent)}
+.apr{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:0 0 10px;flex-wrap:wrap}.apr>span:last-child{display:flex;gap:8px}.apr .btn,.apr .btn2{width:auto;margin:0;padding:7px 14px;font-size:12.5px}
+.lim{font-size:12.5px;color:var(--mut);line-height:1.7;margin:0;padding-left:18px}
+@media (max-width:1240px){.dg{grid-template-columns:1fr}.br{position:static}}
+@media (max-width:760px){.bd{grid-template-columns:1fr 1fr}.kr{grid-template-columns:1fr 1fr}}
+.bc.lk{border-color:color-mix(in srgb,var(--ai) 35%,var(--line))}
+</style>
+</head>
+<body class="flow">
+<header id="top"></header>
+<div class="dc"><section class="kr" id="kr"></section><div class="dg"><section class="bd" id="bd"></section><aside class="br" id="br"></aside></div></div>
+<script type="module" src="../src/decision.js"></script>
+</body>
+</html>

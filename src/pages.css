@@ -1,0 +1,21 @@
+/* Shared layout for the document-style centres (Decision, Evidence, Supplier Portal). */
+body{padding-bottom:80px}
+main{max-width:1240px;margin:0 auto;padding-block:28px 40px;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:18px}
+.ph{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:4px}
+.ph h1{font-size:30px;font-weight:600;letter-spacing:-.03em;line-height:1.15;margin:2px 0 4px;text-wrap:balance}
+.ph .tag{font-size:13px;line-height:24px;padding:0 10px;border-radius:8px}
+.sh{display:flex;align-items:baseline;gap:12px;margin-bottom:10px}
+.sh h2,summary h2{font-size:16px;font-weight:600;letter-spacing:-.015em;margin:0}
+.tw{overflow-x:auto}
+.grid2c{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+a.lnk{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line2);text-underline-offset:3px}
+.own{display:inline-block;margin:4px 6px 0 0;font-size:12px;font-weight:500;padding:2px 8px;border-radius:6px;background:color-mix(in srgb,var(--amber) 14%,transparent);color:var(--amber);text-decoration:none}
+.acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.acts .btn,.acts .btn2{width:auto;margin:0;padding:9px 14px}
+.empty{color:var(--mut);padding:20px 0}
+details.fold>summary{list-style:none;display:flex;align-items:baseline;gap:12px;cursor:pointer}
+details.fold>summary::-webkit-details-marker{display:none}
+details.fold>summary::after{content:"Show";margin-left:auto;font-size:12px;color:var(--mut)}
+details.fold[open]>summary::after{content:"Hide"}
+details.fold[open]>summary{margin-bottom:14px}
+@media (max-width:900px){.grid2c{grid-template-columns:1fr}.ph h1{font-size:25px}}

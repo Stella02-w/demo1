@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CarbonTrace AI Link Discovery</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../src/ui.css">
+<link rel="stylesheet" href="../src/pages.css">
+<style>
+:root{--ai:#b59cff}
+main{max-width:1120px;gap:22px}
+.hero h1{font-size:30px;letter-spacing:-.02em;line-height:1.15;text-wrap:balance;margin:0}
+.hero p{font-size:15px;color:var(--mut);max-width:62ch;margin:10px 0 0;line-height:1.55}
+.flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;counter-reset:s}
+.st{position:relative;display:flex;flex-direction:column;gap:8px;padding:18px 16px;border:1px solid var(--line);border-radius:var(--r);background:var(--panel);min-width:0}
+.st::before{counter-increment:s;content:counter(s);width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:11.5px;font-weight:600;border:1px solid var(--line2);color:var(--mut)}
+.st:not(:last-child)::after{content:"";position:absolute;right:-9px;top:29px;width:6px;height:6px;border-top:1.5px solid var(--dim);border-right:1.5px solid var(--dim);transform:rotate(45deg)}
+.st b{font-size:15px;color:var(--ink);font-weight:600}
+.st p{margin:0;font-size:12.5px;color:var(--mut);line-height:1.5}
+.st .ex{margin-top:auto;padding-top:8px;border-top:1px solid var(--line);font-family:"JetBrains Mono",ui-monospace,monospace;font-size:10.5px;color:var(--dim);line-height:1.5;overflow-wrap:anywhere}
+.st.ai{border-color:color-mix(in srgb,var(--ai) 45%,transparent);background:color-mix(in srgb,var(--ai) 6%,var(--panel))}
+.st.ai::before{content:"✦";color:var(--ai);border-color:color-mix(in srgb,var(--ai) 50%,transparent)}
+.st.hu::before{border-color:var(--teal);color:var(--teal)}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chip{font-size:11px;padding:3px 7px;border-radius:6px;background:rgba(255,255,255,.06);color:var(--mut)}
+.two{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:16px}
+.card h2{font-size:15px;margin:0 0 4px;font-weight:600;color:var(--ink)}
+svg.ex{width:100%;height:auto;display:block;margin-top:8px}
+svg.ex text{font-size:11px;fill:var(--mut);font-family:Inter,system-ui,sans-serif}
+svg.ex .nm{fill:var(--ink);font-weight:600}
+svg.ex .sol{fill:none;stroke:rgba(255,255,255,.45);stroke-width:1.6}
+svg.ex .dash{fill:none;stroke:var(--ai);stroke-width:2;stroke-dasharray:5 4;animation:flow 1.2s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-18}}
+svg.ex .n{fill:var(--mut)}svg.ex .n.l{fill:var(--ai)}svg.ex .badge{fill:var(--bg);stroke:var(--ai);stroke-width:1.5}svg.ex .bt{fill:var(--ai);font-size:10px;text-anchor:middle}
+svg.ex .halo{fill:color-mix(in srgb,var(--ai) 25%,transparent);transform-box:fill-box;transform-origin:center;animation:halo 2s ease-in-out infinite}
+@keyframes halo{50%{transform:scale(1.7);opacity:.3}}
+.sig{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;padding:9px 0;border-top:1px solid var(--line);font-size:12.5px}
+.sig i{grid-row:span 2;font-style:normal;width:22px;height:22px;border-radius:6px;display:grid;place-items:center;font-size:11px;background:color-mix(in srgb,var(--ai) 14%,transparent);color:var(--ai);font-weight:600}
+.sig span{color:var(--mut)}.sig em{font-style:normal;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:10.5px;color:var(--dim)}
+.states{display:flex;flex-direction:column;gap:12px;margin-top:10px}
+.state{display:grid;grid-template-columns:54px 1fr;gap:12px;align-items:center;font-size:12.5px;color:var(--mut)}
+.state b{display:block;color:var(--ink);font-weight:600;font-size:13px}
+.state svg{width:54px;height:12px}
+.rule{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:12px;background:color-mix(in srgb,var(--ai) 8%,transparent);border:1px solid color-mix(in srgb,var(--ai) 30%,transparent);color:var(--ink);font-size:13px;line-height:1.5;margin-top:14px}
+.rule span{color:var(--ai);font-size:16px}
+.back{color:var(--mut);font-size:13px;text-decoration:none}.back:hover{color:var(--ink)}
+@media (max-width:980px){.flow{grid-template-columns:repeat(2,minmax(0,1fr))}.st::after{display:none}.two{grid-template-columns:1fr}}
+@media (max-width:520px){.flow{grid-template-columns:1fr}.hero h1{font-size:24px}}
+</style>
+</head>
+<body>
+<header id="top"></header>
+<main>
+  <a class="back" href="workbench.html">← Sourcing</a>
+  <section class="hero">
+    <h1>How the AI finds supply links</h1>
+    <p>It reads the documents procurement already holds, turns them into links on the supply map, and suggests links nobody has stated yet. A suggestion is a lead to check, never a fact.</p>
+  </section>
+
+  <section class="flow">
+    <div class="st"><b>Read</b><p>Takes in what JLR and its Tier 1s already send and receive.</p>
+      <div class="chips"><span class="chip">Contracts</span><span class="chip">BOMs</span><span class="chip">PCF statements</span><span class="chip">Declarations</span><span class="chip">Customs records</span><span class="chip">Delivery notes</span></div></div>
+    <div class="st"><b>Extract</b><p>Pulls out who supplies whom, which material, how much and when. Each link keeps the sentence and page it came from.</p>
+      <div class="ex">Supplier L → Tier 1 D, Tier 1 E · A356<br>rear cover BOMs</div></div>
+    <div class="st"><b>Match</b><p>Resolves names to one company in the supplier register, using legal name, address and registration number.</p>
+      <div class="ex">“S. L Castings GmbH” = Supplier L</div></div>
+    <div class="st ai"><b>Suggest</b><p>A graph model learns from confirmed links which patterns go together, such as shared alloys, shipments and similar buyers, and scores pairs that have no link yet.</p>
+      <div class="ex">Smelter X → Supplier L · match 0.82</div></div>
+    <div class="st hu"><b>Confirm</b><p>The supplier confirms or rejects through its Tier 1. Only a confirmed link enters a carbon calculation.</p>
+      <div class="ex">Request via Tier 1 E</div></div>
+  </section>
+
+  <section class="two">
+    <div class="card">
+      <h2>Smelter X → Supplier L</h2>
+      <svg class="ex" viewBox="0 0 420 170" role="img" aria-label="Smelter X feeds Supplier H and I; a suggested link to Supplier L">
+        <path class="sol" d="M70,85 C140,85 140,30 214,30"/><path class="sol" d="M70,85 C140,85 140,72 214,72"/>
+        <path class="dash" d="M70,85 C140,85 140,138 214,138"/>
+        <path class="sol" d="M228,138 C290,138 290,138 330,138"/>
+        <circle class="n" cx="64" cy="85" r="6"/><text class="nm" x="20" y="70">Smelter X</text>
+        <circle class="n" cx="220" cy="30" r="5"/><text x="232" y="34">Supplier H</text>
+        <circle class="n" cx="220" cy="72" r="5"/><text x="232" y="76">Supplier I</text>
+        <circle class="halo" cx="220" cy="138" r="10"/><circle class="n l" cx="220" cy="138" r="5.5"/><text class="nm" x="200" y="160">Supplier L</text>
+        <circle class="n" cx="336" cy="138" r="5"/><text x="348" y="142">Tier 1 E</text>
+        <circle class="badge" cx="148" cy="118" r="9"/><text class="bt" x="148" y="122">✦</text>
+      </svg>
+      <div class="sig"><i>1</i><b>Customs record</b><span>3 ingot shipments from Smelter X's port, Apr–Jun 2026</span></div>
+      <div class="sig"><i>2</i><b>Same pattern</b><span>A356 alloy, as Supplier H and I buy from Smelter X</span></div>
+      <div class="sig"><i>3</i><b>Known contracts</b><span>Supplier L supplies Tier 1 D and Tier 1 E for the rear cover, source not named</span></div>
+    </div>
+    <div class="card">
+      <h2>Three kinds of link</h2>
+      <div class="states">
+        <div class="state"><svg viewBox="0 0 54 12"><line x1="2" y1="6" x2="52" y2="6" stroke="var(--teal)" stroke-width="2.5"/></svg><div><b>Confirmed</b>Backed by verified evidence or a signed contract.</div></div>
+        <div class="state"><svg viewBox="0 0 54 12"><line x1="2" y1="6" x2="52" y2="6" stroke="rgba(255,255,255,.55)" stroke-width="2"/></svg><div><b>Stated</b>Named in a declaration or record, not yet checked.</div></div>
+        <div class="state"><svg viewBox="0 0 54 12"><line x1="2" y1="6" x2="52" y2="6" stroke="var(--ai)" stroke-width="2" stroke-dasharray="5 4"/></svg><div><b>Suggested ✦</b>No document states it. The model found the pattern.</div></div>
+      </div>
+      <div class="rule"><span>✦</span>The match score ranks which suggestion to check first. It is not the probability that the link is true.</div>
+    </div>
+  </section>
+</main>
+<script type="module">import {mountNav} from '../src/ui.js'; mountNav('');</script>
+</body>
+</html>
